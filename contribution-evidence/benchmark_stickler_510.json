@@ -1,0 +1,109 @@
+{
+  "imported_stickler": "/workspace/scratch/711c4c52e0fe/stickler-510/src/stickler/__init__.py",
+  "checkout_head": "8d5a25eb30ac17bd411b5b26d907b629dff732e7",
+  "baseline_distance_from": "cf90773855035fa7ac3d8bd0932dbea3367dc151",
+  "python": "3.12.14",
+  "rapidfuzz": "3.14.3",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "cpu_model": "AMD EPYC 9V74 80-Core Processor",
+  "fixture": {
+    "flat": "200 keys; value-NNN-original versus value-NNN-origina1 (18 chars)",
+    "list": "20 LineItem models, each a 30-key dict; item-NN-value-NN (16 chars) versus same plus x; prediction list reversed",
+    "timing": "Fixture/model/JSON construction excluded; public compare()/compare_with() calls; 7 alternating repeats; timeit disables GC inside each timing"
+  },
+  "results": {
+    "flat_200_keys": {
+      "iterations_per_repeat": 20,
+      "repeats": 7,
+      "ms_per_call_samples": {
+        "python_dp": [
+          11.341849199925491,
+          11.178488150017074,
+          11.347483250028745,
+          11.17636790004326,
+          11.63019659998099,
+          11.109513199971843,
+          11.322816049960238
+        ],
+        "rapidfuzz": [
+          2.0205600500048604,
+          2.0645091999540455,
+          2.0527585499621637,
+          2.0320142500168004,
+          2.05347309993158,
+          2.1116041500135907,
+          2.1021884999754548
+        ]
+      },
+      "median_ms_per_call": {
+        "python_dp": 11.322816049960238,
+        "rapidfuzz": 2.05347309993158
+      },
+      "speedup": 5.513983139266594,
+      "score": 0.9444444444444444,
+      "exact_full_output_equal": true
+    },
+    "hungarian_20_items_30_keys": {
+      "iterations_per_repeat": 2,
+      "repeats": 7,
+      "ms_per_call_samples": {
+        "python_dp": [
+          682.7986039997995,
+          729.5672724994802,
+          689.1360709996661,
+          672.4416990000464,
+          661.4015499999368,
+          655.5919459997313,
+          675.9898834998239
+        ],
+        "rapidfuzz": [
+          159.15773249980703,
+          163.59476649995486,
+          154.86729849999392,
+          154.51138749995152,
+          148.03516599931754,
+          144.3875080003636,
+          145.03610400061007
+        ]
+      },
+      "median_ms_per_call": {
+        "python_dp": 675.9898834998239,
+        "rapidfuzz": 154.51138749995152
+      },
+      "speedup": 4.375016588987889,
+      "score": 0.9411764705882353,
+      "exact_full_output_equal": true
+    },
+    "exact_precomputed_canonical_json": {
+      "iterations_per_repeat": 100000,
+      "repeats": 7,
+      "ms_per_call_samples": {
+        "python_dp": [
+          0.0003621683799974562,
+          0.0003591382100057672,
+          0.00037047920000986783,
+          0.0003615393300060532,
+          0.0003506356099933328,
+          0.00036582258000635194,
+          0.0003607241999998223
+        ],
+        "rapidfuzz": [
+          0.0003595491300075082,
+          0.0003656218699870806,
+          0.0003538208000099985,
+          0.0003610761300114973,
+          0.00036590990999684435,
+          0.0003606255499835242,
+          0.0003521917399848462
+        ]
+      },
+      "median_ms_per_call": {
+        "python_dp": 0.0003615393300060532,
+        "rapidfuzz": 0.0003606255499835242
+      },
+      "speedup": 1.0025338748809416,
+      "score": 0.0,
+      "exact_full_output_equal": true
+    }
+  }
+}
